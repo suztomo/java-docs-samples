@@ -17,6 +17,7 @@
 package com.example.appengine.springboot;
 
 // [START gae_java11_helloworld]
+import com.google.appengine.api.utils.HttpRequestParser;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,7 +33,8 @@ public class SpringbootApplication {
 
   @GetMapping("/")
   public String hello() {
-    return "Hello world!";
+    new HttpRequestParser();
+    return "Hello world! ";
   }
 
 }
